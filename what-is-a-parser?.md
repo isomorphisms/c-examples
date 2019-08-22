@@ -33,6 +33,10 @@ Notice that `text` and `Text` don’t look even remotely similar to the computer
 
 Similarly for movie, audio, image, or database — but harder.
 
+Various URL separators like `-`, `_`, and `%20` (` `) also have very different raw-bit representations. Even though people want to use them for the same thing.
+
+The problem is even harder  for `"` vs `”`, where the `”` byte implies that some larger amount of text must be remembered (in memory), so that we can find back to the `“` it pairs with.
+
 
 
 ‡ `/usr/share/misc` or `man ascii` on a mac
