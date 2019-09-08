@@ -1,0 +1,12 @@
+
+https://www.cyberciti.biz/faq/linux-install-ncurses-library-headers-on-debian-ubuntu-centos-fedora/
+
+To link to the ncurses library pass the -lncurses option to
+gcc/cc command:
+$ cc -o output input.c -lncurses
+$ cc -o hello hello.c -lncurses
+Run it:
+$ ./hello
+Sample outputs:
+
+Hello World !!!
