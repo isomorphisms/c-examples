@@ -8,6 +8,8 @@ The number of arguments which will be passed into a function.
 I don't know.
 
 
+
+
 #### What is `argv[0]`?
 
 The name of the program.
@@ -29,6 +31,10 @@ Yes, in perl `$0` is also the name of the program.
 
 An array (=equal-length boxes stacked `N` long) containing the `arguments` which will be passed to the function.
 
+
+###### What if I want the array to be variably-sized?
+
+Then instead of `{{type}} name[size]`, write `{{type}} name[]`.
 
 
 #### What is the standard format for `int main`?
