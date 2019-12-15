@@ -3,6 +3,10 @@
 
 It's a small scripting language.
 
+The commands look like `make`, `make clean`, `make install`, `make dep`, `make distclean`, `make uninstall-data`, `make pack`, `make love`, `make spec`, `make publish`, `make tag`. As with `git`, these are two-word commands.
+
+
+
 `make` was designed to organise long shell commands like `cc -o runnable_program_name main.o kbd.o io.o display.o`, which only need to be run if one of `main.o`, `kbd.o`, `io.o`, `display.o` have changed since the last time `cc -o runnable_program_name` was run.
 
 In other words, `make` checks *dependencies* to see if they were updated, then runs some programs only if they were.
@@ -65,3 +69,50 @@ Karl Broman wrote one.
 *YES*. It can be used to encode other shell scripts and sysadmin tasks, and may be better than a bash function for this.
 
 For example https://www.youtube.com/watch?v=k7zseUhaXeU this sysadmin uses `make` along with short `alias`es to remember and quickly execute special `ssh` commands for particular AWS nodes, and for certain kubernetes commands.
+
+
+
+
+
+## What is `.PHONY`?
+
+https://stackoverflow.com/questions/2145590/what-is-the-purpose-of-phony-in-a-makefile
+
+stackoverflow.com/a/2145605
+
+> sometimes you want your Makefile to run commands that do not represent physical files in the file system.
+Good examples for this are the common targets "clean" and "all". Chances are this isn't the case, but you may
+potentially have a file named clean in your main directory. In such a case Make will be confused because by default
+the clean target would be associated with this file and Make will only run it when the file doesn't appear to be
+up-to-date with regards to its dependencies.
+> 
+> These special targets are called phony and you can explicitly tell Make they're not associated with files, e.g.:
+> 
+> ```
+> .PHONY: clean
+> clean:
+>   rm -rf *.o
+> ```
+> 
+> Now make clean will run as expected even if you do have a file named clean.
+> 
+> In terms of Make, a phony target is simply a target that is always out-of-date
+
+
+
+^ The answerer, Eli Bendersky, writes excellent tech documentation. http://eli.thegreenplace.net has information about ELF files and other stuff. His writing is readable, unlike almost all programmers’ writing.
+
+
+
+
+
+### Where would I find some sample `Makefile`s?
+
+On github, and nowadays they may be packaged with `Dockerfile`s.
+
+I store software I install in `/opt`, so `find /opt -name "Makefile"`  (no `=` in `-name "Makefile"`) lists some for me.
+
+You can also look in `/usr/lib`, `/usr/include`, or `/usr/share`. `find /usr/lib -name "Makefile"` for me found global node modules like vue-cli and sails, which used Makefiles.
+
+
+Lastly, for mac and windows users, homebrew and chocolatey install to places you can find via their documentation. Something like `/usr/local/Cellar/....`.
