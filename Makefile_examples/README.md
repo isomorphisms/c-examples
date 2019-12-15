@@ -3,7 +3,8 @@
 
 It's a small scripting language.
 
-The commands look like `make`, `make clean`, `make install`, `make dep`, `make distclean`, `make uninstall-data`, `make pack`, `make love`, `make spec`, `make publish`, `make tag`. As with `git`, these are two-word commands.
+The commands look like `make`, `make clean`, `make install`, `make dep`, `make distclean`, `make uninstall-data`, `make pack`, `make love`*, `make spec`, `make publish`, `make tag`. As with `git`, these are two-word commands. †
+
 
 
 
@@ -116,3 +117,49 @@ You can also look in `/usr/lib`, `/usr/include`, or `/usr/share`. `find /usr/lib
 
 
 Lastly, for mac and windows users, homebrew and chocolatey install to places you can find via their documentation. Something like `/usr/local/Cellar/....`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* https://github.com/moll/json-stringify-safe/blob/master/Makefile#start-of-content
+
+
+
+† Unfortunately, two-word (with space ` ` not `_`) things cannot be `alias`ed or made function of, easily in bash. https://stackoverflow.com/questions/10169582/create-multi-word-alias-in-bash https://stackoverflow.com/questions/40654352/how-to-write-an-alias-for-two-words 
