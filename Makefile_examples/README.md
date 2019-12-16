@@ -10,9 +10,10 @@ The commands look like `make`, `make clean`, `make install`, `make dep`, `make
 
 `make` was designed to organise long shell commands like ` arm-none-eabi-gcc -o runnable_program_name -mcpu=cortex-m0plus -mthumb --specs=nosys.specs -Wall -c main.o kbd.o io.o display.o`, which only need to be run if one of `main.o`, `kbd.o`, `io.o`, `display.o` have changed since the last time `cc -o runnable_program_name` was run.
 
-You can imagine that typing ____ correctly over and over might be difficult, and yet there you may need to change the call in important ways, so Ctrl+R'ing for `cc` wouldn’t be easy either. Hence building a lever-box: `make`.
-
 In other words, `make` checks *dependencies* to see if they were updated, then runs some programs only if they were.
+
+You can imagine that typing ____ correctly over and over might be difficult, and yet there you may need to change the call in important ways, so Ctrl+R'ing for `cc` wouldn’t be easy either. Hence building a lever-box: `make`. Also, you might not remember what options you selected to make a binary, since bash history isn’t checked into version control.
+
 
 
 ## Can I see an example program?
