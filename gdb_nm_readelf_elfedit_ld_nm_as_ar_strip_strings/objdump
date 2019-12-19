@@ -204,3 +204,63 @@ SYMBOL TABLE:
 000011a9 g     F .text  0000005a              main
 00004020 g     O .data  00000000              .hidden __TMC_END__
 00000000  w      *UND*  00000000              _ITM_registerTMCloneTable
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ arm-none-eabi-objdump -dwarf stupid.program
+
+stupid.program:     file format srec
+stupid.program
+architecture: UNKNOWN!, flags 0x00000000:
+
+start address 0x00001070
+
+arm-none-eabi-objdump: can't disassemble for architecture UNKNOWN!
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ arm-linux-musleabi-objdump -D stupid.program
+
+stupid.program:     file format srec
+
+arm-linux-musleabi-objdump: can't disassemble for architecture UNKNOWN!
+
+
+
+
+
+
+
+
+
+
+
+
+
+$ arm-linux-musleabi-objdump -D a.out
+
+a.out:     file format elf32-little
+
+arm-linux-musleabi-objdump: can't disassemble for architecture UNKNOWN!
+
+
