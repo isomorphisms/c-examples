@@ -1,0 +1,36 @@
+$ arm-none-eabi-size -Atd stupid.program
+stupid.program  :
+section              size    addr
+.interp                19     404
+.note.gnu.build-id     36     424
+.note.ABI-tag          32     460
+.gnu.hash              32     492
+.dynsym               144     524
+.dynstr               182     668
+.gnu.version           18     850
+.gnu.version_r         64     868
+.rel.dyn               64     932
+.rel.plt               24     996
+.init                  32    4096
+.plt                   64    4128
+.plt.got                8    4192
+.text                 529    4208
+.fini                  20    4740
+.rodata                29    8192
+.eh_frame_hdr          60    8224
+.eh_frame             260    8284
+.init_array             4   16116
+.fini_array             4   16120
+.dynamic              240   16124
+.got                   20   16364
+.got.plt               24   16384
+.data                   8   16408
+.bss                    4   16416
+.comment               34       0
+.debug_aranges        144       0
+.debug_info           166       0
+.debug_abbrev         109       0
+.debug_line           332       0
+.debug_str            362       0
+.debug_ranges          72       0
+Total                3140
