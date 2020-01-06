@@ -1,0 +1,12 @@
+From perl, I thought that strings were "just text". From R and go, I learned that strings are “constant”.
+
+What does “constant” mean here?
+
+During the linking phase of compiling a program (`man ld`)—the point where memory is mapped into specific places in an actual architecture—code addresses and data addresses are split into subcategories, like `.rodata`, `.const`, `.intvecs`, `.const`, `.cinit`, and `.pinit`. Physical details of the memory-registered medium, like how many times it can be written over (100k for USB flash), the read/write speed, the timing and placement of how blocks of memory might be jiggered around as the program runs, ………….
+
+So, strings are stored in `.const`—read-only addresses, with all of the implications the read-only promise implies to the person designing the linker.
+
+
+
+
+This has some implication for matching engines (like perl’s regex engine, russ lyons’ code searcher, or ELK/lucene/solr.
