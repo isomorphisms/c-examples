@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/9535250/why-is-the-bss-segment-required
+
+What I know is that global and static variables are stored in the .data segment, and uninitialized data are in the .bss segment. What I don't understand is why do we have dedicated segment for uninitialized variables?
